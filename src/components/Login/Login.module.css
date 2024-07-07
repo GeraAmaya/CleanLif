@@ -1,51 +1,92 @@
-/* src/components/Login/Login.module.css */
+/* Login.module.css */
 .loginContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-  }
-  
-  .companyLogo {
-    width: 150px;
-    margin-bottom: 20px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  input {
-    margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6e8ffb7c, #a877e346);
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+.logo {
+  width: 250px;
+  margin-bottom: 20px;
+  border-radius: 10px; /* Agrega bordes redondeados a la imagen */
+
+}
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.error {
+  color: #ff4d4d;
+  background-color: #ffe6e6;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+form input {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+}
+
+form input:focus {
+  border-color: #6e8efb;
+  outline: none;
+  box-shadow: 0 0 5px rgba(110, 142, 251, 0.5);
+}
+
+form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #6e8efb;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #5a78e1;
+}
+
+@media (max-width: 600px) {
+  .loginContainer {
     padding: 10px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
   }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+
+  form {
+    padding: 20px;
   }
-  
-  button:hover {
-    background-color: #0056b3;
+
+  .logo {
+    width: 150px;
   }
-  
-  .error {
-    color: red;
-    margin-bottom: 10px;
-  }
-  
+}

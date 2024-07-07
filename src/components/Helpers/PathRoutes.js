@@ -2,7 +2,9 @@ const PATHROUTES = {
     LOGIN: '/',
     DASHBOARD: '/dashboard',
     DASHBOARD_OPERARIO: '/dashboard-operario',
-    FAVORITES: '/favorites',
+    DASHBOARDADMIN:'/dashboard-admin',
+    ORDERHISTORY:'/order-history',
+    ORDERFORM:'/order-form',
   };
   
   export default PATHROUTES;

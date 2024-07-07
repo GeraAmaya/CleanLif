@@ -16,18 +16,14 @@ const OrderForm = ({ onOrderPlaced }) => {
     e.preventDefault();
     try {
       await addDoc(collection(db, 'orders'), {
-        locality,
-        target,
-        fullName,
-        orderDate,
-        orderDetails,
-        note,
+        ...orderDetails,
+        createdAt: Timestamp.fromDate(new Date()),
         status: 'Pending',
-        createdAt: new Date(),
       });
-      onOrderPlaced();
-    } catch (err) {
-      console.error('Error placing order: ', err);
+      showNotification('Pedido realizado con éxito');
+    } catch (error) {
+      console.error('Error al enviar el pedido: ', error);
+      showNotification('Error al enviar el pedido');
     }
   };
 

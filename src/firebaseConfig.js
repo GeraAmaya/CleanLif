@@ -10,10 +10,14 @@ const firebaseConfig = {
     storageBucket: "cleanlif-81ae9.appspot.com",
     messagingSenderId: "1017021521840",
     appId: "1:1017021521840:web:18935e499b1d8c0162c075"
-  };
-  
+};
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+
+console.log('Firebase config:', firebaseConfig);
+console.log('Firebase Auth:', auth);
+console.log('Firebase Firestore:', db);
 
 export { auth, db };
