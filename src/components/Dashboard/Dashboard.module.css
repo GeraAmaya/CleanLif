@@ -1,5 +1,35 @@
-
+/* src/components/Dashboard/Dashboard.module.css */
 .dashboardContainer {
-    padding: 20px;
-  }
-  
+  padding: 20px;
+}
+
+.toggleFormButton {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toggleFormButton:hover {
+  background-color: #0056b3;
+}
+
+.ordersTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.ordersTable th,
+.ordersTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.ordersTable th {
+  background-color: #f2f2f2;
+}
